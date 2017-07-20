@@ -2,7 +2,7 @@
 
 ## Lane Detection Project
 
-* The project main goal to detect lane lines on the road. To do so we create a pipeline of actions on images that represent the camera output.
+The project main goal to detect lane lines on the road. To do so we create a pipeline of actions on images that represent the camera output.
 
 ## Pipeline Description
 
