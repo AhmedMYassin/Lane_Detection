@@ -6,7 +6,7 @@ The project main goal to detect lane lines on the road. To do so we create a pip
 
 ## Pipeline Description
 
-* The fllowing steps of the pipeline is used to detect lane lines in images and consequently in videos
+* The following steps of the pipeline is used to detect lane lines in images and consequently in videos
 1. Convert image to grayscale using grayscale(img)
 
 2. Smoothing the image using **gaussian_blur(image, kernel_size)**. Although this step is optional, it's very important to make it easier to detect edges in next step.
@@ -19,7 +19,7 @@ The project main goal to detect lane lines on the road. To do so we create a pip
 
 6. Lane lines detection: in **draw_lines()**, we need to find the lane lines using the generated lines from hough transform algorithm. 
 It's known that the slope is the key to filter the generated lines so we set slope threshold. 
-Now we have accepted lines in 2 groups as per the slope orientation. We need only 2 representitive lines so we use regression method; we already have the start and end points for each line so we can use these points to find the best fit lines (y = mx + b). we apply the next formula to find m and b
+Now we have accepted lines in 2 groups as per the slope orientation. We need only 2 representative lines so we use regression method; we already have the start and end points for each line so we can use these points to find the best fit lines (y = mx + b). We apply the next formula to find m and b
 
    m = (mean(x*y) - mean(x)*mean(y)) / (mean(x^2) - mean(x)^2)
    
@@ -32,12 +32,12 @@ Now we have accepted lines in 2 groups as per the slope orientation. We need onl
 7. We apply the same steps for videos as we apply the same pipeline for each frame.
 
 * Check the test images [here](https://github.com/AhmedMYassin/Lane_Detection/tree/master/test_images) then check the output images [here](https://github.com/AhmedMYassin/Lane_Detection/tree/master/test_images_output)
-* Check the test videos [here](https://github.com/AhmedMYassin/Lane_Detection/tree/master/test_videos) then check the output vidoes [here](https://github.com/AhmedMYassin/Lane_Detection/tree/master/test_videos_output)
+* Check the test videos [here](https://github.com/AhmedMYassin/Lane_Detection/tree/master/test_videos) then check the output videos [here](https://github.com/AhmedMYassin/Lane_Detection/tree/master/test_videos_output)
 
 
 ### 2. Potential Shortcoming
 
-Tuned parameters is the main shortcoming of this code. If we have a closer look on these tuned parameters, we will find that the whole process will fail if enviromnement changes:
+Tuned parameters is the main shortcoming of this code. If we have a closer look on these tuned parameters, we will find that the whole process will fail if environment changes:
 
 1. Driving in the morning needs different edge detection parameters to the ones needed for driving in the night.
 
