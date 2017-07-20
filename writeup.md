@@ -4,7 +4,7 @@
 
 * The project main goal to detect lane lines on the road. To do so we create a pipeline of actions on images that represent the camera output.
 
-** Pipeline Description **
+# ** Pipeline Description **
 
 * The fllowing steps of the pipeline is used to detect lane lines in images and consequently in videos
 * 1. Convert image to grayscale using grayscale(img)
